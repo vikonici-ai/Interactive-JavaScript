@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate email</title>
+</head>
+<body>
+    
+<h1>Email Validation</h1>
+
+<input type="text" id="email">
+<div id="error"></div>
+<button id="button" type="button">Submit</button>
+
+
+
+
+<script>
+
+        var email = document.getElementById("email");
+        var error = document.getElementById("error");
+        var button = document.getElementById("button");
+
+        button.addEventListener("click", function () {
+            if (email.value.includes("@") && email.value.includes(".")) {
+                email.style.borderColor = "green";
+            } else {
+                email.style.borderBlockColor = "red";
+                error.textContent = "Invalid email";
+            }
+        });
+    </script>
+
+
+
+
+
+</body>
+</html>
+
+
